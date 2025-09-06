@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: yourdockerhubusername/myapp:latest
+          image: vpydikondala/myapp:latest
           ports:
             - containerPort: 80
