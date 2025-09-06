@@ -28,7 +28,7 @@ jobs:
           context: ./apps/myapp          # parent directory containing package.json
           file: ./apps/myapp/base/Dockerfile  # path to Dockerfile
           push: true
-          tags: yourdockerhubusername/myapp:latest
+          tags: vpydikondala/myapp:latest
 
       - name: Update image tag in deployment manifest
         run: |
