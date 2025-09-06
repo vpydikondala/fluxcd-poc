@@ -25,7 +25,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./apps/myapp/base
+          context: ./apps/myapp          # parent directory containing package.json
+          file: ./apps/myapp/base/Dockerfile  # path to Dockerfile
           push: true
           tags: yourdockerhubusername/myapp:latest
 
