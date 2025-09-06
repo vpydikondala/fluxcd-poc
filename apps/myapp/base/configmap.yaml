@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myapp-config
+  namespace: myapp          # Make sure this matches your app's namespace
+data:
+  # Example config values your app can read as environment variables or files
+  LOG_LEVEL: "info"
+  APP_MODE: "production"
+  WELCOME_MESSAGE: "Welcome to myapp running with FluxCD!"

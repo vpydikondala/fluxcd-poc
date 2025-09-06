@@ -9,6 +9,7 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
+  - configmap.yaml
 
 # You can optionally define common labels, namespace, or config here, e.g.:
 # namespace: myapp-namespace

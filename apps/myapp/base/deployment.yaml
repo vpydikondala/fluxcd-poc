@@ -18,3 +18,19 @@ spec:
           image: vpydikondala/myapp:latest
           ports:
             - containerPort: 80
+          env:
+            - name: LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  name: myapp-config
+                  key: LOG_LEVEL
+            - name: APP_MODE
+              valueFrom:
+                configMapKeyRef:
+                  name: myapp-config
+                  key: APP_MODE
+            - name: WELCOME_MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: myapp-config
+                  key: WELCOME_MESSAGE
