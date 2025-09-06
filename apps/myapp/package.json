@@ -1,0 +1,6 @@
+- name: Build and push Docker image
+  uses: docker/build-push-action@v4
+  with:
+    context: ./apps/myapp
+    push: true
+    tags: vpydikondala/myapp:latest
