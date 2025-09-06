@@ -1,6 +1,11 @@
+#This file represents the base configuration of your app, containing the core Kubernetes objects.
+
+#It acts as the foundation for overlays (like production, staging, etc.) which customize or patch these base resources.
+
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+# List all the Kubernetes manifests that define the core/base application resources
 resources:
   - deployment.yaml
   - service.yaml

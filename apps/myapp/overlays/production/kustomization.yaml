@@ -1,4 +1,19 @@
+#This overlay extends the base app resources and allows you to make production-specific customizations.
+
+#The production environment can have different image tags, replica counts, resource limits, secrets, etc.
+
+#It references the base, so you avoid duplication and keep a clear environment separation.
+
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+# Reference the base directory relative to this overlay
 resources:
   - ../../base
+# You can add patches, config changes, or image updates here that are specific to production
+# For example, patch the image tag to 'latest' or replicas to '3'
+# patchesStrategicMerge:
+#   - patch.yaml
+#
+# images:
+#   - name: yourdockerhubusername/myapp
+#     newTag: latest

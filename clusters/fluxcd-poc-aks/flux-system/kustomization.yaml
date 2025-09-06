@@ -1,5 +1,13 @@
+
+#This is the Flux system kustomization responsible for installing and managing Flux controllers and sync configuration.
+
+#It is unrelated to your app manifests but critical to bootstrap Flux and keep GitOps functioning.
+
+
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- gotk-components.yaml
-- gotk-sync.yaml
+- gotk-components.yaml   # Flux system components (controllers, etc.)
+- gotk-sync.yaml          # Sync manifests for Flux to track Git repositories
+
+# This kustomization manages Flux’s own system components in the cluster.

@@ -1,5 +1,18 @@
+###This is your cluster-level kustomization where you define cluster-wide resources and apps to deploy.#
+
+#You can choose to deploy the base or an overlay version of your app here.
+
+#If you want environment-specific deployment, it’s better to reference an overlay (overlays/production), not the base.
+
+
+
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+# Define cluster-wide or environment-wide resources and references
 resources:
   - namespaces.yaml
   - ../apps/myapp/overlays/production
+
+  # You could also switch to using overlays here for environment-specific deployment:
+# resources:
+#   - ../apps/myapp/overlays/production
