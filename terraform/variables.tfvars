@@ -1,0 +1,6 @@
+subscription_id = "4f537747-a9bb-4132-b2c6-3e62394ce9f6"
+resource_group_name = "fluxcd-poc-rg"
+location = "eastus"
+k8s_cluster = "fluxcd-poc-aks"
+dns_prefix = "fluxcdpoc"
+vm_size = "Standard_B2s"
