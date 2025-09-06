@@ -11,7 +11,7 @@ kind: Kustomization
 # Define cluster-wide or environment-wide resources and references
 resources:
   - namespaces.yaml
-  - ../apps/myapp/overlays/production
+  - ../../apps/myapp/overlays/production
 
   # You could also switch to using overlays here for environment-specific deployment:
 # resources:
