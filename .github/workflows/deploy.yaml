@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add clusters/fluxcd-poc-aks/apps/myapp-deployment.yaml
+          git add apps/myapp/base/deployment.yaml
           git commit -m "Update image tag to latest"
           git push
         env:
