@@ -38,8 +38,15 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add apps/myapp/base/deployment.yaml
-          git commit -m "Update image tag to latest"
-          git push
+          
+          # Check if there are changes in deployment.yaml
+          if git status --porcelain | grep -q 'apps/myapp/base/deployment.yaml'; then
+            git add apps/myapp/base/deployment.yaml
+            git commit -m "Update image tag to latest"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
