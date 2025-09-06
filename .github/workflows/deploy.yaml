@@ -32,7 +32,7 @@ jobs:
 
       - name: Update image tag in deployment manifest
         run: |
-          sed -i 's|image: yourdockerhubusername/myapp:.*|image: yourdockerhubusername/myapp:latest|' clusters/fluxcd-poc-aks/apps/myapp-deployment.yaml
+          sed -i 's|image: vpydikondala/myapp:.*|image: vpydikondala/myapp:latest|' apps/myapp/base/deployment.yaml
 
       - name: Commit updated manifest
         run: |
